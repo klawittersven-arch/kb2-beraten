@@ -17,7 +17,7 @@
   ✓ Kein innerHTML (Texte werden sicher eingefügt)
 
 == Dateigrößen
-  ✓ Gesamtgröße 103.2 KB (< 150 KB)
+  ✓ Gesamtgröße 103.5 KB (< 150 KB)
   ✓ Keine Fehler in der Konsole
   ✓ Keine Anfragen an fremde Adressen
 

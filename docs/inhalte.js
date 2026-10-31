@@ -155,7 +155,7 @@ var INHALTE = {
           '**Befehlen:** „Sie müssen …“, „Ab sofort …“ → Druck statt Beteiligung.',
           '**Drohen:** „Sonst …“, „Wenn Sie so weitermachen …“ → macht Angst und weckt Widerstand.',
           '**Bagatellisieren:** „Das ist doch kein Problem“, „Das bekommen Sie schon hin“ → Sorgen werden heruntergespielt.',
-          '**Belehren / Moralisieren:** „Das weiß doch jeder“, „Das wissen Sie doch selbst“ → wirkt wie ein Vorwurf und beschämt.',
+          '**Belehren / Moralisieren:** „Das haben wir doch schon hundertmal besprochen“, „Das sollte man eigentlich wissen“ → wirkt wie ein Vorwurf und beschämt.',
           '**Unterbrechen:** der Person ins Wort fallen → ihr Anliegen kommt nicht zur Sprache.',
           '**Thema wechseln:** auf Wichtiges nicht eingehen → die Person fühlt sich übergangen.',
           '**Unnötige Fachsprache:** „HbA1c“, „Hypoglykämie“ → wird oft nicht verstanden.'
@@ -179,7 +179,7 @@ var INHALTE = {
         karten: [
           {
             nummer: 1,
-            text: '„Ich rate Ihnen, abends einfach nichts Süßes mehr zu essen.“',
+            text: '„Ich rate Ihnen, jeden Abend eine Runde um den Block zu gehen.“',
             richtig: 'R',
             erklaerung: 'Die Pflegekraft gibt eine fertige Lösung vor – die Person wird nicht gefragt, was für sie passt.',
             tipp: 'Achten Sie auf die Worte „Ich rate Ihnen …“.'
@@ -233,10 +233,10 @@ var INHALTE = {
         karten: [
           {
             nummer: 7,
-            text: '„Dass Zucker ungesund ist, weiß doch jeder.“',
+            text: '„Wer Diabetes hat, sollte so etwas eigentlich wissen.“',
             richtig: 'BL',
             erklaerung: 'Ein Vorwurf von oben herab – die Person fühlt sich bloßgestellt.',
-            tipp: 'Wie fühlt man sich, wenn jemand sagt: „Das weiß doch jeder“?'
+            tipp: 'Wie fühlt man sich, wenn jemand sagt: „Das sollten Sie eigentlich wissen“?'
           },
           {
             nummer: 8,
@@ -285,14 +285,14 @@ var INHALTE = {
           },
           {
             nummer: 13,
-            text: 'Frau Schneider: „Ohne meinen Kuchen beim Seniorennachmittag macht mir das alles keinen Spaß.“ Welche Reaktion ist professionell?',
+            text: 'Frau Schneider: „Die Fußkontrolle jeden Abend nervt mich. Ich vergesse das ständig.“ Welche Reaktion ist professionell?',
             antworten: [
-              { kuerzel: 'X', text: '„Das ist doch nur ein Stück Kuchen – das schaffen Sie schon.“' },
-              { kuerzel: 'Y', text: '„Der Kuchen ist Ihnen wichtig. Was wäre für Sie ein guter Weg, ihn weiter zu genießen?“' },
-              { kuerzel: 'W', text: '„Sie müssen jetzt einfach verzichten.“' }
+              { kuerzel: 'X', text: '„Ach, das ist doch nur eine Minute – das schaffen Sie schon.“' },
+              { kuerzel: 'Y', text: '„Das klingt anstrengend. Was könnte Ihnen helfen, im Alltag daran zu denken?“' },
+              { kuerzel: 'W', text: '„Sie müssen das jetzt einfach jeden Abend machen.“' }
             ],
             richtig: 'Y',
-            erklaerung: 'Die Pflegekraft nimmt das Anliegen ernst und lässt Frau Schneider selbst nach einer Lösung suchen – ergebnisoffen und partizipativ.',
+            erklaerung: 'Die Pflegekraft nimmt Frau Schneiders Ärger ernst und lässt sie selbst nach einer Lösung suchen – ergebnisoffen und partizipativ.',
             tipp: 'Welche Reaktion lässt Frau Schneider selbst mitentscheiden?'
           },
           {
