@@ -1,0 +1,292 @@
+
+== bremsen.html
+  ✓ Merksatz steht vor dem Lösen nirgends in der Seite
+  ✓ 14 Karten
+  ✓ Nummerierung fortlaufend
+  ✓ 3 Teile mit Überschrift
+  ✓ Fortschritt „0 von 14 gelöst“
+  ✓ 1 Infokarte(n)
+  ✓ Infokarte 1 ist offen
+  ✓ Infokarte 1: alle Punkte sichtbar, **fett** ohne Sternchen
+  ✓ Antwortknöpfe ≥ 48 px hoch, Schrift ≥ 17 px
+  ✓ Sichtbare Schrift überall ≥ 17 px
+  ✓ Kein waagrechtes Scrollen bei 390 px
+  ✓ Kein Text ragt aus einem Knopf heraus
+  ✓ Karte 1: falsche Antwort BE → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 1: Lösung nach BE nicht verraten
+  ✓ Karte 1: falsche Antwort D → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 1: Lösung nach D nicht verraten
+  ✓ Karte 1: falsche Antwort BA → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 1: Lösung nach BA nicht verraten
+  ✓ Karte 1: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 1: danach alle Knöpfe gesperrt
+  ✓ Karte 2: falsche Antwort R → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 2: Lösung nach R nicht verraten
+  ✓ Karte 2: falsche Antwort D → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 2: Lösung nach D nicht verraten
+  ✓ Karte 2: falsche Antwort BA → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 2: Lösung nach BA nicht verraten
+  ✓ Karte 2: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 2: danach alle Knöpfe gesperrt
+  ✓ Karte 3: falsche Antwort R → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 3: Lösung nach R nicht verraten
+  ✓ Karte 3: falsche Antwort BE → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 3: Lösung nach BE nicht verraten
+  ✓ Karte 3: falsche Antwort BA → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 3: Lösung nach BA nicht verraten
+  ✓ Karte 3: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 3: danach alle Knöpfe gesperrt
+  ✓ Karte 4: falsche Antwort R → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 4: Lösung nach R nicht verraten
+  ✓ Karte 4: falsche Antwort BE → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 4: Lösung nach BE nicht verraten
+  ✓ Karte 4: falsche Antwort D → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 4: Lösung nach D nicht verraten
+  ✓ Karte 4: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 4: danach alle Knöpfe gesperrt
+  ✓ Karte 5: falsche Antwort BE → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 5: Lösung nach BE nicht verraten
+  ✓ Karte 5: falsche Antwort D → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 5: Lösung nach D nicht verraten
+  ✓ Karte 5: falsche Antwort BA → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 5: Lösung nach BA nicht verraten
+  ✓ Karte 5: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 5: danach alle Knöpfe gesperrt
+  ✓ Karte 6: falsche Antwort R → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 6: Lösung nach R nicht verraten
+  ✓ Karte 6: falsche Antwort BE → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 6: Lösung nach BE nicht verraten
+  ✓ Karte 6: falsche Antwort BA → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 6: Lösung nach BA nicht verraten
+  ✓ Karte 6: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 6: danach alle Knöpfe gesperrt
+  ✓ Karte 7: falsche Antwort U → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 7: Lösung nach U nicht verraten
+  ✓ Karte 7: falsche Antwort T → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 7: Lösung nach T nicht verraten
+  ✓ Karte 7: falsche Antwort F → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 7: Lösung nach F nicht verraten
+  ✓ Karte 7: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 7: danach alle Knöpfe gesperrt
+  ✓ Karte 8: falsche Antwort BL → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 8: Lösung nach BL nicht verraten
+  ✓ Karte 8: falsche Antwort U → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 8: Lösung nach U nicht verraten
+  ✓ Karte 8: falsche Antwort F → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 8: Lösung nach F nicht verraten
+  ✓ Karte 8: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 8: danach alle Knöpfe gesperrt
+  ✓ Karte 9: falsche Antwort BL → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 9: Lösung nach BL nicht verraten
+  ✓ Karte 9: falsche Antwort U → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 9: Lösung nach U nicht verraten
+  ✓ Karte 9: falsche Antwort T → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 9: Lösung nach T nicht verraten
+  ✓ Karte 9: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 9: danach alle Knöpfe gesperrt
+  ✓ Karte 10: falsche Antwort BL → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 10: Lösung nach BL nicht verraten
+  ✓ Karte 10: falsche Antwort T → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 10: Lösung nach T nicht verraten
+  ✓ Karte 10: falsche Antwort F → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 10: Lösung nach F nicht verraten
+  ✓ Karte 10: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 10: danach alle Knöpfe gesperrt
+  ✓ Karte 11: falsche Antwort U → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 11: Lösung nach U nicht verraten
+  ✓ Karte 11: falsche Antwort T → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 11: Lösung nach T nicht verraten
+  ✓ Karte 11: falsche Antwort F → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 11: Lösung nach F nicht verraten
+  ✓ Karte 11: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 11: danach alle Knöpfe gesperrt
+  ✓ Karte 12: falsche Antwort Z → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 12: Lösung nach Z nicht verraten
+  ✓ Karte 12: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 12: danach alle Knöpfe gesperrt
+  ✓ Karte 13: falsche Antwort X → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 13: Lösung nach X nicht verraten
+  ✓ Karte 13: falsche Antwort W → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 13: Lösung nach W nicht verraten
+  ✓ Karte 13: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 13: danach alle Knöpfe gesperrt
+  ✓ Karte 14: falsche Antwort L → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 14: Lösung nach L nicht verraten
+  ✓ Karte 14: falsche Antwort N → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 14: Lösung nach N nicht verraten
+  ✓ Karte 14: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 14: danach alle Knöpfe gesperrt
+  ✓ Fortschritt am Ende vollständig
+  ✓ Zu viele Fehlversuche → Warnung statt Merksatz
+  ✓ Nach Neuladen bleibt der Stand erhalten
+  ✓ „Aufgabe neu starten“ setzt alles zurück
+  ✓ Keine Karte mehr als gelöst markiert
+  ✓ Merksatz erscheint nach vollständiger Lösung
+  ✓ Hinweis „… Kasten Merksatz A1“ sichtbar
+  ✓ Hinweis steht über dem Merksatz
+  ✓ Hinweis groß, fett und farbig hinterlegt
+  ✓ Erster-Versuch-Zähler stimmt
+  ✓ Keine Sternchen im Merksatz
+  ✓ Fett markierte Wörter im Merksatz
+  ✓ Startseite: bremsen als erledigt markiert
+  ✓ „Noch einmal üben“ setzt zurück und blendet den Merksatz aus
+
+== phasen.html
+  ✓ Merksatz steht vor dem Lösen nirgends in der Seite
+  ✓ 8 Karten
+  ✓ Nummerierung fortlaufend
+  ✓ 3 Teile mit Überschrift
+  ✓ Fortschritt „0 von 14 gelöst“
+  ✓ 0 Infokarte(n)
+  ✓ Antwortknöpfe ≥ 48 px hoch, Schrift ≥ 17 px
+  ✓ Sichtbare Schrift überall ≥ 17 px
+  ✓ Kein waagrechtes Scrollen bei 390 px
+  ✓ Kein Text ragt aus einem Knopf heraus
+  ✓ Karte 1: falsche Antwort P3 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 1: Lösung nach P3 nicht verraten
+  ✓ Karte 1: falsche Antwort P6 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 1: Lösung nach P6 nicht verraten
+  ✓ Karte 1: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 1: danach alle Knöpfe gesperrt
+  ✓ Karte 2: falsche Antwort P5 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 2: Lösung nach P5 nicht verraten
+  ✓ Karte 2: falsche Antwort P4 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 2: Lösung nach P4 nicht verraten
+  ✓ Karte 2: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 2: danach alle Knöpfe gesperrt
+  ✓ Karte 3: falsche Antwort P2 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 3: Lösung nach P2 nicht verraten
+  ✓ Karte 3: falsche Antwort P6 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 3: Lösung nach P6 nicht verraten
+  ✓ Karte 3: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 3: danach alle Knöpfe gesperrt
+  ✓ Karte 4: falsche Antwort P1 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 4: Lösung nach P1 nicht verraten
+  ✓ Karte 4: falsche Antwort P5 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 4: Lösung nach P5 nicht verraten
+  ✓ Karte 4: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 4: danach alle Knöpfe gesperrt
+  ✓ Karte 5: falsche Antwort P3 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 5: Lösung nach P3 nicht verraten
+  ✓ Karte 5: falsche Antwort P2 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 5: Lösung nach P2 nicht verraten
+  ✓ Karte 5: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 5: danach alle Knöpfe gesperrt
+  ✓ Karte 6: falsche Antwort P4 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 6: Lösung nach P4 nicht verraten
+  ✓ Karte 6: falsche Antwort P1 → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 6: Lösung nach P1 nicht verraten
+  ✓ Karte 6: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 6: danach alle Knöpfe gesperrt
+  ✓ Karte 7: falsche Antwort P → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 7: Lösung nach P nicht verraten
+  ✓ Karte 7: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 7: danach alle Knöpfe gesperrt
+  ✓ Karte 8: falsche Antwort S → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 8: Lösung nach S nicht verraten
+  ✓ Karte 8: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 8: danach alle Knöpfe gesperrt
+  ✓ Reihenfolge: 6 Schritte, gemischt angezeigt
+  ✓ Schritt 1: falscher Schritt → Tipp „Womit beginnt jedes gute Gespr…“
+  ✓ Schritt 1: falsch getippter Schritt vorerst gesperrt
+  ✓ Schritt 1: falscher Schritt wird nicht gelegt
+  ✓ Schritt 1 richtig gelegt
+  ✓ Schritt 2: falscher Schritt → Tipp „Bevor man Ziele festlegt: Was …“
+  ✓ Schritt 2: falsch getippter Schritt vorerst gesperrt
+  ✓ Schritt 2: falscher Schritt wird nicht gelegt
+  ✓ Schritt 2 richtig gelegt
+  ✓ Schritt 3: falscher Schritt → Tipp „Der Bedarf ist klar. Was wird …“
+  ✓ Schritt 3: falsch getippter Schritt vorerst gesperrt
+  ✓ Schritt 3: falscher Schritt wird nicht gelegt
+  ✓ Schritt 3 richtig gelegt
+  ✓ Schritt 4: falscher Schritt → Tipp „Das Ziel steht. Was folgt jetz…“
+  ✓ Schritt 4: falsch getippter Schritt vorerst gesperrt
+  ✓ Schritt 4: falscher Schritt wird nicht gelegt
+  ✓ Schritt 4 richtig gelegt
+  ✓ Schritt 5: falscher Schritt → Tipp „Bevor das Gespräch endet: Was …“
+  ✓ Schritt 5: falsch getippter Schritt vorerst gesperrt
+  ✓ Schritt 5: falscher Schritt wird nicht gelegt
+  ✓ Schritt 5 richtig gelegt
+  ✓ Schritt 6 richtig gelegt
+  ✓ Reihenfolge vollständig und korrekt angezeigt
+  ✓ Auswahl verschwindet nach dem letzten Schritt
+  ✓ Abschlussmeldung der Reihenfolge
+  ✓ Fortschritt am Ende vollständig
+  ✓ Zu viele Fehlversuche → Warnung statt Merksatz
+  ✓ Nach Neuladen bleibt der Stand erhalten
+  ✓ „Aufgabe neu starten“ setzt alles zurück
+  ✓ Keine Karte mehr als gelöst markiert
+  ✓ Merksatz erscheint nach vollständiger Lösung
+  ✓ Hinweis „… Kasten Merksatz B1“ sichtbar
+  ✓ Hinweis steht über dem Merksatz
+  ✓ Hinweis groß, fett und farbig hinterlegt
+  ✓ Erster-Versuch-Zähler stimmt
+  ✓ Keine Sternchen im Merksatz
+  ✓ Fett markierte Wörter im Merksatz
+  ✓ Startseite: phasen als erledigt markiert
+  ✓ „Noch einmal üben“ setzt zurück und blendet den Merksatz aus
+
+== angehoerige.html
+  ✓ Merksatz steht vor dem Lösen nirgends in der Seite
+  ✓ 6 Karten
+  ✓ Nummerierung fortlaufend
+  ✓ 2 Teile mit Überschrift
+  ✓ Fortschritt „0 von 6 gelöst“
+  ✓ 1 Infokarte(n)
+  ✓ Infokarte 1 ist offen
+  ✓ Infokarte 1: alle Punkte sichtbar, **fett** ohne Sternchen
+  ✓ Antwortknöpfe ≥ 48 px hoch, Schrift ≥ 17 px
+  ✓ Sichtbare Schrift überall ≥ 17 px
+  ✓ Kein waagrechtes Scrollen bei 390 px
+  ✓ Kein Text ragt aus einem Knopf heraus
+  ✓ Karte 1: falsche Antwort J → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 1: Lösung nach J nicht verraten
+  ✓ Karte 1: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 1: danach alle Knöpfe gesperrt
+  ✓ Karte 2: falsche Antwort D → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 2: Lösung nach D nicht verraten
+  ✓ Karte 2: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 2: danach alle Knöpfe gesperrt
+  ✓ Karte 3: falsche Antwort P → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 3: Lösung nach P nicht verraten
+  ✓ Karte 3: falsche Antwort N → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 3: Lösung nach N nicht verraten
+  ✓ Karte 3: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 3: danach alle Knöpfe gesperrt
+  ✓ Karte 4: falsche Antwort V → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 4: Lösung nach V nicht verraten
+  ✓ Karte 4: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 4: danach alle Knöpfe gesperrt
+  ✓ Karte 5: falsche Antwort F → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 5: Lösung nach F nicht verraten
+  ✓ Karte 5: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 5: danach alle Knöpfe gesperrt
+  ✓ Karte 6: falsche Antwort F → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 6: Lösung nach F nicht verraten
+  ✓ Karte 6: falsche Antwort L → ✗, deaktiviert, Tipp sichtbar
+  ✓ Karte 6: Lösung nach L nicht verraten
+  ✓ Karte 6: richtige Antwort → ✓ und Erklärung
+  ✓ Karte 6: danach alle Knöpfe gesperrt
+  ✓ Fortschritt am Ende vollständig
+  ✓ Zu viele Fehlversuche → Warnung statt Merksatz
+  ✓ Nach Neuladen bleibt der Stand erhalten
+  ✓ „Aufgabe neu starten“ setzt alles zurück
+  ✓ Keine Karte mehr als gelöst markiert
+  ✓ Merksatz erscheint nach vollständiger Lösung
+  ✓ Hinweis „… Kasten Merksatz C1“ sichtbar
+  ✓ Hinweis steht über dem Merksatz
+  ✓ Hinweis groß, fett und farbig hinterlegt
+  ✓ Erster-Versuch-Zähler stimmt
+  ✓ Keine Sternchen im Merksatz
+  ✓ Fett markierte Wörter im Merksatz
+  ✓ Startseite: angehoerige als erledigt markiert
+  ✓ „Noch einmal üben“ setzt zurück und blendet den Merksatz aus
+
+== index.html
+  ✓ Startseite verlinkt alle drei Übungen
+
+== Allgemein
+  ✓ Keine Fehler in der Konsole
+  ✓ Keine Anfragen an fremde Adressen
+
+280 von 280 Prüfungen bestanden.

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Fortschritt am Beamer – KB II Beratung</title>
+<link rel="stylesheet" href="fortschritt.css">
+</head>
+<body>
+<section id="start" hidden>
+  <div class="start-innen">
+    <h1 id="start-titel"></h1>
+    <p id="start-text"></p>
+    <p class="fehler" id="start-fehler" role="alert"></p>
+    <button type="button" class="knopf" id="starten"></button>
+  </div>
+</section>
+
+<section id="tafel" hidden>
+  <header class="tafel-kopf">
+    <div class="kopf-links">
+      <h1 id="tafel-titel"></h1>
+      <p id="zusammenfassung"></p>
+      <p id="legende"></p>
+    </div>
+    <div class="raum">
+      <span class="raum-label" id="raum-label"></span>
+      <span class="raum-code" id="raum-code"></span>
+      <span class="raum-hinweis" id="raum-hinweis"></span>
+    </div>
+  </header>
+  <main class="tafel-mitte">
+    <p id="warten"></p>
+    <div id="raster" aria-live="polite"></div>
+  </main>
+  <footer class="tafel-fuss">
+    <span id="status"><span class="punkt" id="status-punkt"></span><span id="status-text"></span></span>
+    <span id="demo-hinweis" hidden></span>
+    <span class="fuss-knoepfe">
+      <button type="button" class="leise" id="namen"></button>
+      <button type="button" class="leise" id="vollbild"></button>
+      <button type="button" class="leise" id="leeren"></button>
+      <button type="button" class="leise" id="neuer-raum"></button>
+    </span>
+  </footer>
+  <div id="dialog" class="dialog" hidden role="dialog" aria-modal="false">
+    <p id="dialog-text"></p>
+    <div class="dialog-knoepfe" id="dialog-knoepfe"></div>
+  </div>
+</section>
+<noscript><p>Bitte aktivieren Sie JavaScript.</p></noscript>
+<script src="inhalte.js"></script>
+<script src="config.js"></script>
+<script src="gemeinsam.js"></script>
+<script src="fortschritt.js"></script>
+</body>
+</html>

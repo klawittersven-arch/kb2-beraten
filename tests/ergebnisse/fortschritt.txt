@@ -1,0 +1,69 @@
+
+== Beamer-Seite: Raum starten
+  ✓ Startseite sichtbar
+  ✓ „Neuen Raum starten“ ist bedienbar (Adresse eingetragen)
+  ✓ Raumcode angezeigt: 8397
+  ✓ „Warten auf die ersten Anmeldungen …“
+
+== Handy 1 (Mia): Anmeldung
+  ✓ Anmeldekasten oben in der Übung
+  ✓ Leerer Name → Hinweis
+  ✓ Sperrwort → Hinweis
+  ✓ Zu kurzer Raumcode → Hinweis
+  ✓ Unbekannter Raumcode → Hinweis
+  ✓ Angemeldet-Zeile erscheint
+  ✓ Zeile zeigt Name und Raum
+  ✓ Beamer zeigt „Mia“
+  ✓ Beamer: Mia A1 3/14 (nach drei Antworten)
+  ✓ Handy zeigt „Stand übertragen“
+
+== Handy 2 (Ben): C1 vollständig
+  ✓ Raumcode aus der Adresse vorausgefüllt
+  ✓ Beamer: Ben C1 6/6 ✓
+  ✓ Zusammenfassung „C1 fertig: 1“
+
+== Handy 3 (zweite Mia): durchklicken
+  ✓ Gleicher Vorname → „Mia (2)“
+  ✓ Durchgeklickt → „6/6 ⚠“
+
+== Handy 1 wechselt zur zweiten Übung
+  ✓ Auf der zweiten Übung weiter angemeldet
+  ✓ Beamer: dieselbe Zeile zeigt A1 3/14 und C1 1/6
+
+== Offline
+  ✓ Ohne Netz: „Gerade keine Verbindung …“
+  ✓ Nach Rückkehr des Netzes: Beamer zeigt Ben 0/6
+
+== Namen verbergen
+  ✓ Namen verborgen → „Person 1 …“
+  ✓ Namen wieder sichtbar
+  ✓ Neuladen der Beamer-Seite: derselbe Raum
+  ✓ Neuladen: alle drei Einträge wieder da
+
+== Moderation
+  ✓ Klick auf Eintrag → Rückfrage
+  ✓ Ben entfernt
+  ✓ Handy von Ben: Hinweis „von der Lehrkraft entfernt“
+  ✓ Ben taucht nicht von selbst wieder auf
+  ✓ „Liste leeren“ entfernt alle Einträge
+  ✓ Weiterarbeitendes Handy erscheint wieder
+
+== Ohne Anzeige weiter
+  ✓ „Ohne Anzeige weiter“ → nur noch kleiner Knopf
+  ✓ Ohne Anmeldung keine einzige Anfrage an den Worker
+  ✓ Entscheidung bleibt nach Neuladen erhalten
+
+== Zugriffsschutz
+  ✓ Stand ohne richtigen Schlüssel → 403
+  ✓ Gespeichert sind nur Geräte-ID, Name, Stand je Übung, Zeit
+  ✓ Name mit HTML wird vom Worker abgelehnt
+  ✓ Zu große Anfrage wird abgelehnt
+
+== Automatisches Löschen
+  ✓ Nach Ablauf der Lebensdauer ist der Raum samt Daten gelöscht
+
+== Allgemein
+  ✓ Keine Programmfehler in der Konsole
+  ✓ Keine Anfragen an fremde Adressen
+
+43 von 43 Prüfungen bestanden.

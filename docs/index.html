@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#25434B">
+<meta name="referrer" content="no-referrer">
+<title>Professionell beraten – KB II</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="kopf">
+  <p class="kopfzeile" id="kopfzeile"></p>
+  <h1 id="titel"></h1>
+</header>
+<main class="inhalt">
+  <p class="anweisung" id="einleitung"></p>
+  <nav class="startlinks" id="startlinks"></nav>
+</main>
+<script src="inhalte.js"></script>
+<script src="gemeinsam.js"></script>
+<script>
+  (function () {
+    var S = INHALTE.start;
+    document.getElementById('kopfzeile').textContent = INHALTE.allgemein.kopfzeile;
+    document.getElementById('titel').textContent = S.titel;
+    document.getElementById('einleitung').textContent = S.einleitung;
+    var nav = document.getElementById('startlinks');
+    S.links.forEach(function (l) {
+      var a = APP.element('a', 'startlink' + (APP.Erledigt.ist(l.seite) ? ' erledigt' : ''), l.text);
+      a.href = l.seite + '.html';
+      a.id = 'link-' + l.seite;
+      nav.appendChild(a);
+    });
+  })();
+</script>
+</body>
+</html>

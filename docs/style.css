@@ -1,0 +1,271 @@
+/* Gestaltung der Übungsseiten – Farben wie in der KB2-App */
+:root {
+  --dunkelpetrol: #25434B;
+  --petrol: #3F6C72;
+  --hellblau: #EAF2F4;
+  --text: #16262A;
+  --hintergrund: #FFFFFF;
+  --gruen: #1B6E35;
+  --gruen-hell: #E2F3E7;
+  --bernstein: #7A4300;
+  --bernstein-rand: #D98B00;
+  --bernstein-hell: #FFF2D9;
+  --rand: #C5D8DC;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--hintergrund);
+}
+
+a { color: var(--petrol); }
+
+.nur-vorlesen {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ---------- Kopf ---------- */
+.kopf {
+  background: var(--dunkelpetrol);
+  color: #fff;
+  padding: 16px 16px 18px;
+}
+.kopfzeile { margin: 0 0 4px; font-size: 17px; opacity: .92; letter-spacing: .01em; }
+.kopf h1 { margin: 0; font-size: 23px; line-height: 1.3; }
+
+/* ---------- Fortschritt ---------- */
+.fortschritt {
+  position: sticky; top: 0; z-index: 5;
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid var(--rand);
+  font-size: 17px; font-weight: 600;
+}
+.fortschritt-spur {
+  flex: 1; height: 10px; border-radius: 5px; background: var(--hellblau);
+  overflow: hidden; border: 1px solid var(--rand);
+}
+.fortschritt-balken { display: block; height: 100%; width: 0; background: var(--petrol); transition: width .3s; }
+
+/* ---------- Inhalt ---------- */
+.inhalt { max-width: 720px; margin: 0 auto; padding: 16px 16px 40px; }
+.anweisung { margin: 4px 0 16px; font-size: 18px; }
+
+
+/* ---------- Karten ---------- */
+.karte {
+  background: var(--hellblau);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 0 0 16px;
+}
+.karte.ist-richtig { border-color: var(--gruen); }
+.karte-kopf { display: flex; gap: 12px; align-items: flex-start; }
+.nummer {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--dunkelpetrol); color: #fff; font-weight: 700; font-size: 18px;
+}
+.aussage { margin: 3px 0 12px; font-size: 18px; }
+
+.knoepfe { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+
+.antwort {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 52px; padding: 8px 10px;
+  font: inherit; font-size: 17px; font-weight: 600; line-height: 1.25;
+  color: #fff; background: var(--petrol);
+  border: 2px solid var(--petrol); border-radius: 10px;
+  cursor: pointer; touch-action: manipulation; text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.antwort:hover:not(:disabled) { background: var(--dunkelpetrol); border-color: var(--dunkelpetrol); }
+.antwort:focus-visible { outline: 3px solid #F2B600; outline-offset: 2px; }
+.antwort:disabled { cursor: default; }
+.antwort .symbol:empty { display: none; }
+.antwort .symbol { font-weight: 800; font-size: 19px; }
+
+/* noch nicht gewählte Knöpfe auf einer gelösten Karte */
+.karte.ist-richtig .antwort:not(.richtig):not(.falsch) {
+  background: #fff; color: #51666B; border-color: var(--rand);
+}
+.antwort.richtig, .antwort.richtig:disabled {
+  background: var(--gruen); border-color: var(--gruen); color: #fff;
+}
+.antwort.falsch, .antwort.falsch:disabled {
+  background: var(--bernstein-hell); border: 2px dashed var(--bernstein-rand); color: var(--bernstein);
+  text-decoration: line-through;
+}
+
+/* ---------- Rückmeldung ---------- */
+.rueckmeldung:empty { display: none; }
+.rueckmeldung { margin-top: 12px; padding: 10px 12px; border-radius: 10px; border-left: 6px solid; }
+.rueckmeldung p { margin: 0; }
+.rueckmeldung .rueck-titel { font-weight: 700; margin-bottom: 4px; }
+.rueckmeldung.ist-richtig { background: var(--gruen-hell); border-color: var(--gruen); color: #10421F; }
+.rueckmeldung.ist-richtig .symbol { color: var(--gruen); }
+.rueckmeldung.ist-falsch { background: var(--bernstein-hell); border-color: var(--bernstein-rand); color: #4D2A00; }
+.rueckmeldung.ist-falsch .symbol { color: var(--bernstein); }
+
+/* ---------- Merksatz ---------- */
+.merksatz {
+  margin: 8px 0 20px; padding: 18px 16px;
+  background: #fff; border: 4px solid var(--dunkelpetrol); border-radius: 14px;
+  box-shadow: 0 0 0 4px var(--hellblau);
+}
+.merksatz h2 { margin: 0 0 8px; font-size: 22px; color: var(--dunkelpetrol); }
+.merksatz-text { margin: 0 0 12px; font-size: 20px; font-weight: 700; line-height: 1.45; }
+.merksatz-text .betont { font-weight: 900; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 3px; }
+.merksatz-hinweis {
+  display: flex; gap: 10px; align-items: flex-start;
+  margin: 4px 0 14px; padding: 12px 14px;
+  background: #FFF3C4; border: 3px solid #F2B600; border-radius: 12px;
+  color: #3D2A00; font-size: 20px; font-weight: 800; line-height: 1.35;
+  animation: hinweis-blinken 1.2s ease-in-out 2;
+}
+.hinweis-symbol { flex: none; font-size: 28px; line-height: 1; }
+@keyframes hinweis-blinken { 0%, 100% { box-shadow: 0 0 0 0 rgba(242, 182, 0, 0); } 50% { box-shadow: 0 0 0 6px rgba(242, 182, 0, .45); } }
+@media (prefers-reduced-motion: reduce) { .merksatz-hinweis { animation: none; } }
+.erster-versuch { margin: 0; font-size: 17px; }
+
+
+/* ---------- Knöpfe allgemein ---------- */
+.knopf {
+  display: block; width: 100%; min-height: 52px; padding: 10px 16px;
+  font: inherit; font-weight: 700; font-size: 18px;
+  border-radius: 10px; cursor: pointer; touch-action: manipulation;
+}
+.knopf-zweit { background: #fff; color: var(--dunkelpetrol); border: 2px solid var(--petrol); }
+.knopf-zweit:hover { background: var(--hellblau); }
+.knopf:focus-visible, a:focus-visible { outline: 3px solid #F2B600; outline-offset: 2px; }
+
+.fuss { margin-top: 20px; text-align: center; }
+
+/* ---------- Zu viele Fehlversuche ---------- */
+.durchklicken { margin: 8px 0 20px; padding: 18px 16px; background: var(--bernstein-hell); border: 4px solid var(--bernstein-rand); border-radius: 14px; color: #4D2A00; }
+.durchklicken h2 { margin: 0 0 8px; font-size: 23px; }
+.durchklicken p { margin: 0 0 14px; }
+.durchklicken-knopf { background: var(--petrol); color: #fff; border: 2px solid var(--petrol); }
+
+
+/* ---------- Startseite ---------- */
+.startlinks { display: grid; gap: 14px; }
+.startlink {
+  display: block; padding: 16px; min-height: 56px; border-radius: 12px;
+  background: var(--petrol); color: #fff; font-weight: 700; text-decoration: none; font-size: 18px;
+}
+.startlink:hover { background: var(--dunkelpetrol); }
+.startlink.erledigt::after { content: "  ✓"; }
+
+@media (min-width: 600px) {
+  .kopf { padding: 20px 24px; }
+  .kopf h1 { font-size: 27px; }
+  .knoepfe-2 { grid-template-columns: 1fr 1fr; }
+  .knoepfe-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fortschritt-balken { transition: none; }
+}
+
+/* ==========================================================================
+   Ergänzungen KB1: Infokarten, Abschnitte, lange Antworten, Reihenfolge
+   ========================================================================== */
+
+/* ---------- Infokarten ---------- */
+.info-hinweis { margin: 0 0 8px; font-size: 17px; color: #3A5157; }
+.info {
+  margin: 0 0 12px; border: 2px solid var(--petrol); border-radius: 10px; background: #fff;
+}
+.info summary {
+  cursor: pointer; padding: 12px 14px; min-height: 48px; font-weight: 700; color: var(--dunkelpetrol);
+  list-style-position: inside;
+}
+.info[open] summary { border-bottom: 1px solid var(--rand); background: var(--hellblau); border-radius: 8px 8px 0 0; }
+.info-inhalt { padding: 6px 14px 10px; }
+.info-inhalt p { margin: 8px 0; }
+.info-inhalt ul { margin: 6px 0 8px; padding-left: 22px; }
+.info-inhalt li { margin: 4px 0; }
+.info-merke { padding: 8px 10px; background: var(--hellblau); border-radius: 8px; }
+.betont { font-weight: 800; }
+.quelle { margin: 4px 0 18px; font-size: 17px; color: #51666B; }
+
+/* ---------- Abschnitte ---------- */
+.abschnitt { margin: 22px 0 8px; }
+.abschnitt > h2 {
+  margin: 0 0 6px; padding-bottom: 4px; font-size: 21px; line-height: 1.3; color: var(--dunkelpetrol);
+  border-bottom: 3px solid var(--hellblau);
+}
+.abschnitt-anweisung { margin: 0 0 12px; }
+
+/* ---------- Antworten mit langem Text: untereinander, linksbündig ---------- */
+.knoepfe-3 { grid-template-columns: 1fr; }
+.knoepfe-lang { grid-template-columns: 1fr; }
+.knoepfe-lang .antwort { justify-content: flex-start; text-align: left; }
+
+/* ---------- Reihenfolge ---------- */
+.reihe {
+  background: var(--hellblau); border: 2px solid transparent; border-radius: 12px; padding: 14px; margin: 0 0 16px;
+}
+.reihe.ist-richtig { border-color: var(--gruen); }
+.reihe-label { margin: 0 0 8px; font-weight: 700; }
+.reihe-gelegt { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 8px; }
+.reihe-gelegt li.leer { color: #51666B; font-style: italic; }
+.reihe-gelegt li.gelegt {
+  display: flex; gap: 10px; align-items: center; padding: 8px 10px; min-height: 48px;
+  background: var(--gruen-hell); border: 2px solid var(--gruen); border-radius: 10px; color: #10421F; font-weight: 600;
+}
+.gelegt-nummer {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 50%; background: var(--gruen); color: #fff; font-weight: 800;
+}
+.reihe-auswahl { display: grid; gap: 10px; grid-template-columns: 1fr; }
+.reihe-auswahl .antwort { justify-content: flex-start; text-align: left; }
+
+@media (min-width: 600px) {
+  .knoepfe-3 { grid-template-columns: repeat(3, 1fr); }
+  .knoepfe-lang { grid-template-columns: 1fr; }
+}
+
+/* ---------- Fortschritt am Beamer: Anmeldung auf dem Handy ---------- */
+.anmeldung { margin: 0 0 16px; padding: 12px 14px; background: #fff; border: 2px solid var(--petrol); border-radius: 12px; }
+.anmeldung h2 { margin: 0 0 4px; font-size: 20px; color: var(--dunkelpetrol); }
+.anmelde-text { margin: 0 0 10px; }
+.anmelde-felder { display: grid; gap: 10px; }
+.anmelde-feld label { display: block; font-weight: 700; margin-bottom: 4px; }
+.anmelde-feld input {
+  width: 100%; min-height: 48px; padding: 8px 10px; font: inherit; font-size: 19px;
+  border: 2px solid var(--rand); border-radius: 10px; color: var(--text); background: #fff;
+}
+.anmelde-feld input.code { letter-spacing: .25em; font-weight: 800; font-variant-numeric: tabular-nums; }
+.anmelde-feld input:focus { outline: 3px solid #F2B600; outline-offset: 1px; border-color: var(--petrol); }
+.anmelde-fehler { margin: 10px 0 0; padding: 8px 10px; background: var(--bernstein-hell); border-left: 6px solid var(--bernstein-rand); border-radius: 8px; color: #4D2A00; font-weight: 600; }
+.anmelde-fehler:empty { display: none; }
+.anmelde-knoepfe { display: grid; gap: 10px; margin-top: 12px; }
+.anmelde-los { background: var(--petrol); color: #fff; border: 2px solid var(--petrol); }
+.anmelde-los:disabled { opacity: .6; }
+.anmeldung.angemeldet { padding: 8px 12px; border-width: 1px; background: var(--hellblau); }
+.anmelde-wer { margin: 0; font-weight: 600; }
+.anmelde-status { margin: 2px 0 0; font-size: 17px; color: #3A5157; }
+.anmelde-status.offline { color: var(--bernstein); font-weight: 600; }
+.anmelde-status.gesendet { color: var(--gruen); }
+.textknopf {
+  font: inherit; font-size: 17px; color: var(--petrol); background: none; border: none; padding: 6px 2px;
+  min-height: 44px; text-decoration: underline; cursor: pointer;
+}
+.anmelde-doch { display: block; margin: 0 0 12px; }
+@media (min-width: 600px) {
+  .anmelde-felder { grid-template-columns: 1fr 1fr; }
+  .anmelde-knoepfe { grid-template-columns: 1fr 1fr; }
+}

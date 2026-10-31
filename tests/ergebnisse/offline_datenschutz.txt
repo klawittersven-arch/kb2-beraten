@@ -1,0 +1,24 @@
+
+== Offline (Service Worker)
+  ✓ Alle Dateien liegen im Offline-Speicher
+  ✓ sw.js listet jede HTML-, JS- und CSS-Datei
+  ✓ index.html funktioniert ohne Netz
+  ✓ bremsen.html funktioniert ohne Netz
+  ✓ phasen.html funktioniert ohne Netz
+  ✓ angehoerige.html funktioniert ohne Netz
+  ✓ fortschritt.html funktioniert ohne Netz
+  ✓ Antworten funktioniert auch offline
+
+== Datenschutz
+  ✓ Keine Cookies
+  ✓ Keine externen Adressen im Quelltext (keine Schriften, Skripte, Analyse)
+  ✓ Daten senden nur melden.js (Fortschritt, nach Anmeldung) und fortschritt.js (Beamer); sw.js lädt eigene Dateien
+  ✓ melden.js sendet nur an CONFIG.FORTSCHRITT_URL
+  ✓ Kein innerHTML (Texte werden sicher eingefügt)
+
+== Dateigrößen
+  ✓ Gesamtgröße 103.2 KB (< 150 KB)
+  ✓ Keine Fehler in der Konsole
+  ✓ Keine Anfragen an fremde Adressen
+
+16 von 16 Prüfungen bestanden.
