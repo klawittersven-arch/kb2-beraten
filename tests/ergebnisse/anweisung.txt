@@ -1,0 +1,86 @@
+
+== Beamer 1600 × 900
+  ✓ 2 Anweisungs-Knöpfe unten
+  ✓ Beschriftung aus inhalte.js
+  ✓ Zu Beginn keine Anweisung eingeblendet
+  ✓ Ohne Anweisung: alle 24 Karten passen
+  ✓ Ohne Anweisung: Namen und alle Balken vollständig lesbar
+  ✓ Klick → „Bearbeiten Sie jetzt die Aufgaben A1 und A2!“
+  ✓ Knopf A ist als aktiv markiert
+  ✓ Fortschritt bleibt sichtbar (24 Karten)
+  ✓ Mit Anweisung: alle Karten passen unter die Anweisung
+  ✓ Mit Anweisung: Namen und alle Balken vollständig lesbar
+  ✓ Knöpfe unten bleiben im Bild
+  ✓ Klick auf B → „Bearbeiten Sie jetzt die Aufgaben B1, B2, C1 und C2!“
+  ✓ Mit Anweisung B: Karten und Namen passen
+  ✓ Nur Knopf B ist aktiv
+  ✓ Nach Neuladen bleibt die Anweisung stehen
+  ✓ Nach Neuladen passen alle Karten
+  ✓ Noch ein Klick → Anweisung ausgeblendet
+  ✓ Karten nutzen danach wieder den ganzen Platz
+
+== Beamer 1280 × 720
+  ✓ 2 Anweisungs-Knöpfe unten
+  ✓ Beschriftung aus inhalte.js
+  ✓ Zu Beginn keine Anweisung eingeblendet
+  ✓ Ohne Anweisung: alle 24 Karten passen
+  ✓ Ohne Anweisung: Namen und alle Balken vollständig lesbar
+  ✓ Klick → „Bearbeiten Sie jetzt die Aufgaben A1 und A2!“
+  ✓ Knopf A ist als aktiv markiert
+  ✓ Fortschritt bleibt sichtbar (24 Karten)
+  ✓ Mit Anweisung: alle Karten passen unter die Anweisung
+  ✓ Mit Anweisung: Namen und alle Balken vollständig lesbar
+  ✓ Knöpfe unten bleiben im Bild
+  ✓ Klick auf B → „Bearbeiten Sie jetzt die Aufgaben B1, B2, C1 und C2!“
+  ✓ Mit Anweisung B: Karten und Namen passen
+  ✓ Nur Knopf B ist aktiv
+  ✓ Nach Neuladen bleibt die Anweisung stehen
+  ✓ Nach Neuladen passen alle Karten
+  ✓ Noch ein Klick → Anweisung ausgeblendet
+  ✓ Karten nutzen danach wieder den ganzen Platz
+
+== Beamer 1920 × 1080
+  ✓ 2 Anweisungs-Knöpfe unten
+  ✓ Beschriftung aus inhalte.js
+  ✓ Zu Beginn keine Anweisung eingeblendet
+  ✓ Ohne Anweisung: alle 24 Karten passen
+  ✓ Ohne Anweisung: Namen und alle Balken vollständig lesbar
+  ✓ Klick → „Bearbeiten Sie jetzt die Aufgaben A1 und A2!“
+  ✓ Knopf A ist als aktiv markiert
+  ✓ Fortschritt bleibt sichtbar (24 Karten)
+  ✓ Mit Anweisung: alle Karten passen unter die Anweisung
+  ✓ Mit Anweisung: Namen und alle Balken vollständig lesbar
+  ✓ Knöpfe unten bleiben im Bild
+  ✓ Klick auf B → „Bearbeiten Sie jetzt die Aufgaben B1, B2, C1 und C2!“
+  ✓ Mit Anweisung B: Karten und Namen passen
+  ✓ Nur Knopf B ist aktiv
+  ✓ Nach Neuladen bleibt die Anweisung stehen
+  ✓ Nach Neuladen passen alle Karten
+  ✓ Noch ein Klick → Anweisung ausgeblendet
+  ✓ Karten nutzen danach wieder den ganzen Platz
+
+== Beamer 1024 × 768
+  ✓ 2 Anweisungs-Knöpfe unten
+  ✓ Beschriftung aus inhalte.js
+  ✓ Zu Beginn keine Anweisung eingeblendet
+  ✓ Ohne Anweisung: alle 24 Karten passen
+  ✓ Ohne Anweisung: Namen und alle Balken vollständig lesbar
+  ✓ Klick → „Bearbeiten Sie jetzt die Aufgaben A1 und A2!“
+  ✓ Knopf A ist als aktiv markiert
+  ✓ Fortschritt bleibt sichtbar (24 Karten)
+  ✓ Mit Anweisung: alle Karten passen unter die Anweisung
+  ✓ Mit Anweisung: Namen und alle Balken vollständig lesbar
+  ✓ Knöpfe unten bleiben im Bild
+  ✓ Klick auf B → „Bearbeiten Sie jetzt die Aufgaben B1, B2, C1 und C2!“
+  ✓ Mit Anweisung B: Karten und Namen passen
+  ✓ Nur Knopf B ist aktiv
+  ✓ Nach Neuladen bleibt die Anweisung stehen
+  ✓ Nach Neuladen passen alle Karten
+  ✓ Noch ein Klick → Anweisung ausgeblendet
+  ✓ Karten nutzen danach wieder den ganzen Platz
+
+== Allgemein
+  ✓ Keine Programmfehler in der Konsole
+  ✓ Keine Anfragen an fremde Adressen
+
+74 von 74 Prüfungen bestanden.

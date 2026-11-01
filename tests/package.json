@@ -3,7 +3,7 @@
   "private": true,
   "description": "Automatische Tests für die Web-App zu KB II Beratung (nur zum Testen, nicht Teil der Website)",
   "scripts": {
-    "test": "node uebungen.test.js && node offline_datenschutz.test.js && node fortschritt.test.js"
+    "test": "node uebungen.test.js && node offline_datenschutz.test.js && node fortschritt.test.js && node anweisung.test.js"
   },
   "devDependencies": {
     "playwright": "1.56.1"

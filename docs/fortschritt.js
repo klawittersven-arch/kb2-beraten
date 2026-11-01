@@ -19,6 +19,8 @@
   var ABFRAGE_MS = Math.max(2, Number(C.ABFRAGE_SEKUNDEN) || 3) * 1000;
   var RUHIG_MS = (Number(C.RUHIG_MINUTEN) || 10) * 60000;
   var SCHL = 'kb2_lehrer_raum';
+  var SCHL_ANWEISUNG = 'kb2_lehrer_anweisung';
+  var ANWEISUNGEN = Array.isArray(T.anweisungen) ? T.anweisungen : [];   // [{ knopf, text }]
 
   var params;
   try { params = new URLSearchParams(location.search); } catch (e) { params = { get: function () { return null; } }; }
@@ -28,6 +30,7 @@
   var geraete = [];           // vom Worker
   var bekannt = {};           // geraeteId → true (für die Einblend-Animation)
   var namenVerborgen = false;
+  var anweisung = null;       // Nummer der eingeblendeten Anweisung oder null
   var abfrageTimer = null;
   var laeuft = false;
 
@@ -93,6 +96,7 @@
     $('tafel').hidden = false;
     $('raum-code').textContent = raum.raum;
     $('demo-hinweis').hidden = !demo;
+    anweisungZeigen();
     zeichnen();
     laeuft = true;
     abfragen();
@@ -164,12 +168,37 @@
     return liste;
   }
 
+  // Höhe des Kartenbereichs in vh – wird gemessen, weil eine eingeblendete Anweisung Platz braucht
+  function verfuegbareHoehe() {
+    var h = $('raster').parentNode.clientHeight / (window.innerHeight || 1) * 100;
+    return h > 10 ? h : 72;
+  }
+
+  // Kartenmaße und Schriftgröße (fs, in vh) so wählen, dass Name + ein Balken je Übung vollständig
+  // in jede Karte passen. Fest: Rand .35vh + Innenabstand .7vh (oben und unten), Abstand Name–Zeilen
+  // .4vh, zwischen den Zeilen .5vh. Der Name braucht ≈ 1,5 × fs, jede Übungszeile ≈ 1,25 × fs.
+  // In der Breite braucht eine Zeile („C1“, Balken, „14/14 ✓“) ≈ 10 × fs.
+  // Wird es eng (z. B. mit eingeblendeter Anweisung), sind 1–2 Spalten mehr oft besser lesbar.
   function rasterMasse(n) {
-    var spalten = n <= 4 ? 2 : n <= 9 ? 3 : n <= 16 ? 4 : n <= 30 ? 5 : 6;
-    var zeilen = Math.max(1, Math.ceil(n / spalten));
-    // verfügbare Höhe ≈ 72vh; Karten nie höher als 15vh
-    var h = Math.min(15, (72 - (zeilen - 1)) / zeilen);
-    return { spalten: spalten, h: Math.max(5.5, h) };
+    var vh = (window.innerHeight || 900) / 100;
+    var vw = (window.innerWidth || 1600) / 100;
+    var hoehe = verfuegbareHoehe();
+    var breite = $('raster').clientWidth || 95 * vw;
+    var z = Math.max(1, SPALTEN.length);
+    var basis = n <= 4 ? 2 : n <= 9 ? 3 : n <= 16 ? 4 : n <= 30 ? 5 : 6;
+    var bestes = null;
+    for (var spalten = basis; spalten <= Math.max(basis, Math.min(basis + 2, n)); spalten++) {
+      var zeilen = Math.max(1, Math.ceil(n / spalten));
+      // Karten füllen den verfügbaren Platz (1vh Abstand je Zeile), sind aber nie höher als 15vh
+      var h = Math.max(5.5, Math.min(15, (hoehe - (zeilen - 1)) / zeilen));
+      var fsHoehe = (h - 2.5 - 0.5 * (z - 1)) / (1.5 + 1.25 * z);
+      var kartenBreite = (breite - (spalten - 1) * vw) / spalten;
+      var fsBreite = (kartenBreite - 3.2 * vw - 0.7 * vh) / 10 / vh;
+      var fs = Math.min(fsHoehe, fsBreite);
+      if (!bestes || fs > bestes.fs * 1.05) bestes = { spalten: spalten, h: h, fs: fs };
+    }
+    bestes.fs = Math.max(0.8, bestes.fs);
+    return bestes;
   }
 
   function zeichnen() {
@@ -190,8 +219,7 @@
     var m = rasterMasse(liste.length);
     raster.style.gridTemplateColumns = 'repeat(' + m.spalten + ', minmax(0, 1fr))';
     raster.style.setProperty('--h', m.h.toFixed(2));
-    // Schriftgröße so wählen, dass Name + ein Balken je Übung in die Karte passen
-    raster.style.setProperty('--fs', (m.h / (2 + 1.6 * SPALTEN.length)).toFixed(3));
+    raster.style.setProperty('--fs', m.fs.toFixed(3));
     raster.textContent = '';
     var jetzt = Date.now();
 
@@ -270,6 +298,7 @@
     frage(T.neuerRaumFrage, T.ja, function () {
       K.Speicher.dauer.schreiben(SCHL, null);
       raum = null;
+      anweisungSetzen(null);
       if (demo) { location.href = location.pathname; return; }
       startZeigen('');
     });
@@ -289,6 +318,44 @@
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') $('dialog').hidden = true;
+  });
+
+  /* ---------- Anweisung für die Klasse (groß über den Karten) ---------- */
+  function anweisungZeigen() {
+    var an = anweisung !== null;
+    var box = $('anweisung');
+    box.textContent = an ? ANWEISUNGEN[anweisung].text : '';
+    box.hidden = !an;
+    $('tafel').classList.toggle('mit-anweisung', an);
+    Array.prototype.forEach.call(document.querySelectorAll('.anweisung-knopf'), function (k) {
+      k.setAttribute('aria-pressed', String(Number(k.getAttribute('data-anweisung')) === anweisung));
+    });
+  }
+
+  function anweisungSetzen(nr) {
+    anweisung = nr;
+    K.Speicher.sitzung.schreiben(SCHL_ANWEISUNG, nr);   // übersteht ein Neuladen der Seite
+    anweisungZeigen();
+    if (laeuft) zeichnen();                              // Karten an den übrigen Platz anpassen
+  }
+
+  ANWEISUNGEN.forEach(function (a, nr) {
+    var knopf = el('button', 'leise anweisung-knopf', a.knopf);
+    knopf.type = 'button';
+    knopf.title = T.anweisungTipp || '';
+    knopf.setAttribute('data-anweisung', nr);
+    knopf.addEventListener('click', function () { anweisungSetzen(anweisung === nr ? null : nr); });
+    $('anweisung-knoepfe').appendChild(knopf);
+  });
+
+  var gemerkt = K.Speicher.sitzung.lesen(SCHL_ANWEISUNG);
+  if (typeof gemerkt === 'number' && ANWEISUNGEN[gemerkt]) anweisung = gemerkt;
+
+  // Fenstergröße geändert (z. B. Beamer angeschlossen) → Karten neu einpassen
+  var groesseTimer = null;
+  window.addEventListener('resize', function () {
+    clearTimeout(groesseTimer);
+    groesseTimer = setTimeout(function () { if (laeuft) zeichnen(); }, 150);
   });
 
   /* ---------- Bildschirm wach halten ---------- */

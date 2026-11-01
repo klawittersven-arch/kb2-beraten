@@ -57,6 +57,12 @@ Raumcode zeigen. Die SuS geben oben in der Übung Vorname + Raumcode ein; angeze
 **Vollbild**, Eintrag entfernen (Klick), **Liste leeren**, **Neuer Raum**. Probeansicht ohne Netz:
 `…/fortschritt.html?demo=1`.
 
+**Anweisung A1 + A2** bzw. **Anweisung B1 + B2 + C1 + C2** (unten, gelb umrandet) blendet groß über den
+Karten ein: „Bearbeiten Sie jetzt die Aufgaben A1 und A2!“ bzw. „… B1, B2, C1 und C2!“. Der Fortschritt
+bleibt darunter sichtbar (die Karten werden passend verkleinert). Noch ein Klick auf denselben Knopf
+blendet die Anweisung wieder aus; ein Neuladen der Seite übersteht sie. Texte und Knöpfe stehen in
+`docs/inhalte.js` → `beamer.anweisungen`.
+
 Es wird **derselbe Cloudflare-Dienst** wie für die KB1-App genutzt
 (`https://kb1-diabetes.klawittersven.workers.dev`, eingetragen in `docs/config.js`). Eine eigene
 Einrichtung ist nicht nötig – der Dienst muss nur einmal für `kb1-diabetes` eingerichtet sein (siehe
@@ -100,4 +106,5 @@ node uebungen.test.js            # alle drei Übungen in Handygröße 390 × 844
 node offline_datenschutz.test.js # Offline, externe Adressen, Cookies, Dateigrößen
 node fortschritt.test.js         # Beamer + mehrere Handys; braucht das Repository kb1-diabetes
                                  # daneben (oder KB1_REPO=Pfad) mit „npm install“ im Ordner worker/
+node anweisung.test.js           # Beamer: Anweisung ein-/ausblenden, Karten lesbar (Probeansicht)
 ```
