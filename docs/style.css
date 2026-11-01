@@ -269,3 +269,18 @@ a { color: var(--petrol); }
   .anmelde-felder { grid-template-columns: 1fr 1fr; }
   .anmelde-knoepfe { grid-template-columns: 1fr 1fr; }
 }
+
+/* ---------- Übersehene Aufgabe: Hinweis am Ende und Aufleuchten ---------- */
+.offen {
+  margin: 8px 0 20px; padding: 18px 16px;
+  background: #FFF3C4; border: 4px solid #F2B600; border-radius: 14px; color: #3D2A00;
+}
+.offen h2 { margin: 0 0 8px; font-size: 22px; }
+.offen p { margin: 0 0 14px; font-weight: 600; }
+.offen-knopf { background: var(--petrol); color: #fff; border: 2px solid var(--petrol); }
+.offen-knopf:hover { background: var(--dunkelpetrol); }
+.karte.aufleuchten, .reihe.aufleuchten { border-color: #F2B600; animation: aufleuchten 1.2s ease-in-out 2; }
+@keyframes aufleuchten { 0%, 100% { box-shadow: 0 0 0 0 rgba(242, 182, 0, 0); } 50% { box-shadow: 0 0 0 8px rgba(242, 182, 0, .55); } }
+@media (prefers-reduced-motion: reduce) {
+  .karte.aufleuchten, .reihe.aufleuchten { animation: none; box-shadow: 0 0 0 6px rgba(242, 182, 0, .55); }
+}

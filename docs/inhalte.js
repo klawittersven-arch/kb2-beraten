@@ -57,7 +57,15 @@ var INHALTE = {
     // {x} = beim ersten Versuch richtig, {y} = Anzahl, {z} = nötige Mindestzahl
     durchklickenTitel: 'Hey, nicht einfach durchklicken!',
     durchklickenText: 'Beim ersten Versuch richtig: {x} von {y} – nötig sind mindestens {z}. Lesen Sie jede Aufgabe genau und überlegen Sie, bevor Sie tippen. Dann erhalten Sie auch Ihren Merksatz.',
-    durchklickenKnopf: 'Aufgabe neu starten'
+    durchklickenKnopf: 'Aufgabe neu starten',
+    // Erscheint am Ende, wenn die letzte Aufgabe gelöst ist, weiter oben aber noch etwas fehlt.
+    // {liste} = z. B. „Aufgabe 3, Aufgabe 7“; {nr} = Nummer; {titel} = Name der Reihenfolge-Aufgabe
+    offenTitel: 'Fast geschafft – hier fehlt noch etwas!',
+    offenText: 'Noch nicht gelöst: {liste}. Erst wenn alles gelöst ist, erscheint Ihr Merksatz.',
+    offenKarte: 'Aufgabe {nr}',
+    offenReihe: '„{titel}“',
+    offenKnopf: 'Zur offenen Aufgabe springen ↑',
+    offenKnopfMehrere: 'Zur ersten offenen Aufgabe springen ↑'
   },
 
   /* ------------------------------------------------------------------------

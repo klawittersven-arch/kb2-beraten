@@ -144,6 +144,37 @@ const H = require('./hilfen');
     // „Noch einmal üben“
     await p.click('#noch-einmal');
     H.pruefe((await p.locator('#fortschritt-text').innerText()) === `0 von ${gesamt} gelöst` && !(await merksatzDa()), '„Noch einmal üben“ setzt zurück und blendet den Merksatz aus');
+
+    // ---------- Durchgang 3: eine Aufgabe übersehen ----------
+    // Aufgaben in der Reihenfolge der Seite; die erste Karte wird „übersehen“
+    const folge = [];
+    daten.abschnitte.forEach((ab) => {
+      if (ab.art === 'reihenfolge') folge.push({ reihe: reihen.find((r) => r.ab === ab) });
+      else ab.karten.forEach((k) => folge.push({ k }));
+    });
+    const loesen = async (a) => {
+      if (a.k) await p.click(`#karte-${a.k.nummer} [data-kuerzel="${a.k.richtig}"]`);
+      else for (let i = 0; i < a.reihe.ab.schritte.length; i++) await p.click(`#reihe-${a.reihe.nr} .reihe-auswahl [data-schritt="${i}"]`);
+    };
+    const uebersehen = folge.find((a) => a.k);
+    const letzte = folge[folge.length - 1];
+    for (const a of folge) if (a !== uebersehen && a !== letzte) await loesen(a);
+    H.pruefe((await p.locator('.offen').count()) === 0, 'Solange die letzte Aufgabe offen ist: kein Hinweis');
+    await loesen(letzte);
+    await p.waitForTimeout(400);
+    const offenText = await p.locator('.offen').innerText().catch(() => '');
+    H.pruefe(offenText.includes(`Aufgabe ${uebersehen.k.nummer}`) && !(await merksatzDa()), `Letzte Aufgabe gelöst, Aufgabe ${uebersehen.k.nummer} offen → Hinweis „Noch nicht gelöst: Aufgabe ${uebersehen.k.nummer}“ statt Merksatz`, offenText);
+    const imBild = (sel) => p.locator(sel).evaluate((e) => { const r = e.getBoundingClientRect(); return r.bottom > 0 && r.top < window.innerHeight; });
+    H.pruefe(await imBild('.offen'), 'Der Hinweis wird ins Bild gescrollt');
+    await p.click('.offen-knopf');
+    await p.waitForTimeout(900);
+    const ziel = `#karte-${uebersehen.k.nummer}`;
+    H.pruefe(await imBild(ziel), 'Sprung-Knopf scrollt zur übersehenen Aufgabe');
+    H.pruefe(await p.locator(ziel).evaluate((e) => e.classList.contains('aufleuchten')), 'Die übersehene Aufgabe leuchtet auf');
+    await loesen(uebersehen);
+    await p.waitForTimeout(400);
+    H.pruefe((await merksatzDa()) && (await p.locator('.offen').count()) === 0, 'Nach dem Nachholen: Merksatz statt Hinweis');
+    await p.click('#noch-einmal');
     await p.close();
   }
 

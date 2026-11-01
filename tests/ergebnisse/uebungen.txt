@@ -131,6 +131,12 @@
   ✓ Fett markierte Wörter im Merksatz
   ✓ Startseite: bremsen als erledigt markiert
   ✓ „Noch einmal üben“ setzt zurück und blendet den Merksatz aus
+  ✓ Solange die letzte Aufgabe offen ist: kein Hinweis
+  ✓ Letzte Aufgabe gelöst, Aufgabe 1 offen → Hinweis „Noch nicht gelöst: Aufgabe 1“ statt Merksatz
+  ✓ Der Hinweis wird ins Bild gescrollt
+  ✓ Sprung-Knopf scrollt zur übersehenen Aufgabe
+  ✓ Die übersehene Aufgabe leuchtet auf
+  ✓ Nach dem Nachholen: Merksatz statt Hinweis
 
 == phasen.html
   ✓ Merksatz steht vor dem Lösen nirgends in der Seite
@@ -227,6 +233,12 @@
   ✓ Fett markierte Wörter im Merksatz
   ✓ Startseite: phasen als erledigt markiert
   ✓ „Noch einmal üben“ setzt zurück und blendet den Merksatz aus
+  ✓ Solange die letzte Aufgabe offen ist: kein Hinweis
+  ✓ Letzte Aufgabe gelöst, Aufgabe 1 offen → Hinweis „Noch nicht gelöst: Aufgabe 1“ statt Merksatz
+  ✓ Der Hinweis wird ins Bild gescrollt
+  ✓ Sprung-Knopf scrollt zur übersehenen Aufgabe
+  ✓ Die übersehene Aufgabe leuchtet auf
+  ✓ Nach dem Nachholen: Merksatz statt Hinweis
 
 == angehoerige.html
   ✓ Merksatz steht vor dem Lösen nirgends in der Seite
@@ -284,6 +296,12 @@
   ✓ Fett markierte Wörter im Merksatz
   ✓ Startseite: angehoerige als erledigt markiert
   ✓ „Noch einmal üben“ setzt zurück und blendet den Merksatz aus
+  ✓ Solange die letzte Aufgabe offen ist: kein Hinweis
+  ✓ Letzte Aufgabe gelöst, Aufgabe 1 offen → Hinweis „Noch nicht gelöst: Aufgabe 1“ statt Merksatz
+  ✓ Der Hinweis wird ins Bild gescrollt
+  ✓ Sprung-Knopf scrollt zur übersehenen Aufgabe
+  ✓ Die übersehene Aufgabe leuchtet auf
+  ✓ Nach dem Nachholen: Merksatz statt Hinweis
 
 == index.html
   ✓ Startseite verlinkt alle drei Übungen
@@ -292,4 +310,4 @@
   ✓ Keine Fehler in der Konsole
   ✓ Keine Anfragen an fremde Adressen
 
-283 von 283 Prüfungen bestanden.
+301 von 301 Prüfungen bestanden.

@@ -159,6 +159,7 @@
   var abschnitteBereich = document.getElementById('abschnitte');
   var kartenElemente = [];
   var reihenElemente = [];
+  var aufgabenFolge = [];   // alle Aufgaben in der Reihenfolge auf der Seite (für „noch offen“)
 
   seite.abschnitte.forEach(function (ab, aIndex) {
     var sek = el('section', 'abschnitt');
@@ -168,10 +169,12 @@
     abschnitteBereich.appendChild(sek);
 
     if (ab.art === 'reihenfolge') {
+      aufgabenFolge.push({ art: 'reihe', r: reihenElemente.length, titel: String(ab.ueberschrift).replace(/^Teil \d+\s*·\s*/, '') });
       reiheAufbauen(sek, reihenElemente.length, ab);
       return;
     }
     ab.karten.forEach(function (karte) {
+      aufgabenFolge.push({ art: 'karte', index: kartenElemente.length, nummer: karte.nummer });
       karteAufbauen(sek, kartenElemente.length, { karte: karte, abschnitt: ab });
     });
   });
@@ -398,13 +401,77 @@
     for (var i = 0; i < karten.length; i++) karteZeigen(i);
     for (var r = 0; r < reihen.length; r++) reiheZeigen(r, false);
     fortschrittZeigen();
-    merksatzZeigen(scrollen);
+    endeZeigen(scrollen);
+  }
+
+  /* ---------- Übersehene Aufgaben ----------
+     Ist die letzte Aufgabe der Seite gelöst, aber weiter oben noch etwas offen,
+     erscheint am Ende statt des Merksatzes ein Hinweis mit Sprung-Knopf. */
+  function aufgabeGeloest(a) {
+    if (a.art === 'karte') return !!zustand.karten[a.index].richtig;
+    return zustand.reihen[a.r].gelegt === reihen[a.r].abschnitt.schritte.length;
+  }
+
+  function aufgabeElement(a) {
+    return a.art === 'karte' ? kartenElemente[a.index].karte : reihenElemente[a.r].box;
+  }
+
+  function aufgabeName(a) {
+    return a.art === 'karte' ? K.ersetzen(A.offenKarte, { nr: a.nummer }) : K.ersetzen(A.offenReihe, { titel: a.titel });
+  }
+
+  function hinspringen(a) {
+    var ziel = aufgabeElement(a);
+    ziel.scrollIntoView({ behavior: K.ruhig() ? 'auto' : 'smooth', block: 'center' });
+    ziel.classList.remove('aufleuchten');
+    void ziel.offsetWidth; // Animation neu starten
+    ziel.classList.add('aufleuchten');
+    setTimeout(function () { ziel.classList.remove('aufleuchten'); }, 3000);
+    setTimeout(function () {
+      var knopf = ziel.querySelector('button:not([disabled])');
+      if (knopf) knopf.focus({ preventScroll: true });
+    }, 450);
+  }
+
+  var endeStand = '';   // '' | 'offen:…' | 'fertig'
+  function endeZeigen(scrollen) {
+    var vorher = endeStand;
+    var offen = aufgabenFolge.filter(function (a) { return !aufgabeGeloest(a); });
+    var letzte = aufgabenFolge[aufgabenFolge.length - 1];
+    if (!offen.length) endeStand = 'fertig';
+    else if (letzte && aufgabeGeloest(letzte)) endeStand = 'offen:' + offen.map(aufgabeName).join('|');
+    else endeStand = '';
+
+    if (endeStand === 'fertig') {
+      if (vorher !== 'fertig') merksatzZeigen(scrollen);
+      return;
+    }
+    merksatzBereich.textContent = '';
+    if (!endeStand) {
+      merksatzBereich.hidden = true;
+      return;
+    }
+    var kasten = el('section', 'offen');
+    kasten.setAttribute('role', 'status');
+    kasten.appendChild(el('h2', null, A.offenTitel));
+    kasten.appendChild(el('p', null, K.ersetzen(A.offenText, { liste: offen.map(aufgabeName).join(', ') })));
+    var knopf = el('button', 'knopf offen-knopf', offen.length > 1 ? A.offenKnopfMehrere : A.offenKnopf);
+    knopf.type = 'button';
+    knopf.addEventListener('click', function () { hinspringen(offen[0]); });
+    kasten.appendChild(knopf);
+    merksatzBereich.appendChild(kasten);
+    merksatzBereich.hidden = false;
+    // nur beim ersten Erscheinen hinscrollen (nicht, während jemand oben nacharbeitet)
+    if (scrollen && vorher.indexOf('offen:') !== 0) {
+      setTimeout(function () {
+        kasten.scrollIntoView({ behavior: K.ruhig() ? 'auto' : 'smooth', block: 'center' });
+      }, 150);
+    }
   }
 
   /* ---------- Antworten ---------- */
-  function fertigGeworden(vorher) {
-    var gesamt = gesamtZahl();
-    if (vorher !== gesamt && anzahlGeloest() === gesamt) merksatzZeigen(true);
+  function fertigGeworden() {
+    endeZeigen(true);
   }
 
   function antworten_(index, kuerzel) {
@@ -445,6 +512,7 @@
     K.Erledigt.zuruecknehmen(seiteId);
     zustand = leererZustand();
     speichern();
+    endeStand = '';
     allesZeigen(false);
     window.scrollTo({ top: 0, behavior: K.ruhig() ? 'auto' : 'smooth' });
   }
