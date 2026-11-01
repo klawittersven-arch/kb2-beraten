@@ -120,7 +120,6 @@
   document.getElementById('kopfzeile').textContent = A.kopfzeile;
   document.getElementById('titel').textContent = seite.titel;
   document.getElementById('anweisung').textContent = seite.anweisung;
-  document.getElementById('zur-uebersicht').textContent = A.zurUebersicht;
 
   var fortschrittText = document.getElementById('fortschritt-text');
   var fortschrittBalken = document.getElementById('fortschritt-balken');

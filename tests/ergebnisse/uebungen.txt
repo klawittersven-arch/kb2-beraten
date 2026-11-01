@@ -4,6 +4,7 @@
   ✓ 14 Karten
   ✓ Nummerierung fortlaufend
   ✓ 3 Teile mit Überschrift
+  ✓ Kein Link zur Übersicht (SuS bleiben in ihrer Aufgabe)
   ✓ Fortschritt „0 von 14 gelöst“
   ✓ 1 Infokarte(n)
   ✓ Infokarte 1 ist offen
@@ -136,6 +137,7 @@
   ✓ 8 Karten
   ✓ Nummerierung fortlaufend
   ✓ 3 Teile mit Überschrift
+  ✓ Kein Link zur Übersicht (SuS bleiben in ihrer Aufgabe)
   ✓ Fortschritt „0 von 14 gelöst“
   ✓ 0 Infokarte(n)
   ✓ Antwortknöpfe ≥ 48 px hoch, Schrift ≥ 17 px
@@ -231,6 +233,7 @@
   ✓ 6 Karten
   ✓ Nummerierung fortlaufend
   ✓ 2 Teile mit Überschrift
+  ✓ Kein Link zur Übersicht (SuS bleiben in ihrer Aufgabe)
   ✓ Fortschritt „0 von 6 gelöst“
   ✓ 1 Infokarte(n)
   ✓ Infokarte 1 ist offen
@@ -289,4 +292,4 @@
   ✓ Keine Fehler in der Konsole
   ✓ Keine Anfragen an fremde Adressen
 
-280 von 280 Prüfungen bestanden.
+283 von 283 Prüfungen bestanden.

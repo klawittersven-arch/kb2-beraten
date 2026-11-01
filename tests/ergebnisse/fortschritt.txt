@@ -2,7 +2,7 @@
 == Beamer-Seite: Raum starten
   ✓ Startseite sichtbar
   ✓ „Neuen Raum starten“ ist bedienbar (Adresse eingetragen)
-  ✓ Raumcode angezeigt: 8992
+  ✓ Raumcode angezeigt: 9769
   ✓ „Warten auf die ersten Anmeldungen …“
 
 == Handy 1 (Mia): Anmeldung

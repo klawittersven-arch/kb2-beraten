@@ -31,6 +31,7 @@ const H = require('./hilfen');
     const nummern = await p.$$eval('.karte .nummer', (n) => n.map((x) => x.textContent));
     H.pruefe(JSON.stringify(nummern) === JSON.stringify(karten.map((e) => String(e.k.nummer))), 'Nummerierung fortlaufend', nummern);
     H.pruefe((await p.locator('section.abschnitt h2').count()) === daten.abschnitte.length, `${daten.abschnitte.length} Teile mit Überschrift`);
+    H.pruefe((await p.locator('a[href="index.html"], a[href="./"]').count()) === 0, 'Kein Link zur Übersicht (SuS bleiben in ihrer Aufgabe)');
     H.pruefe((await p.locator('#fortschritt-text').innerText()) === `0 von ${gesamt} gelöst`, `Fortschritt „0 von ${gesamt} gelöst“`);
 
     const infos = daten.infokarten || [];

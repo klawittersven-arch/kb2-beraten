@@ -57,8 +57,7 @@ var INHALTE = {
     // {x} = beim ersten Versuch richtig, {y} = Anzahl, {z} = nötige Mindestzahl
     durchklickenTitel: 'Hey, nicht einfach durchklicken!',
     durchklickenText: 'Beim ersten Versuch richtig: {x} von {y} – nötig sind mindestens {z}. Lesen Sie jede Aufgabe genau und überlegen Sie, bevor Sie tippen. Dann erhalten Sie auch Ihren Merksatz.',
-    durchklickenKnopf: 'Aufgabe neu starten',
-    zurUebersicht: 'Zur Übersicht'
+    durchklickenKnopf: 'Aufgabe neu starten'
   },
 
   /* ------------------------------------------------------------------------
